@@ -111,7 +111,8 @@ def clean_data(filename='data.csv', modern_files=[]):
     label_encoder = LabelEncoder()
     data['temperament'] = label_encoder.fit_transform(data['temperament'])
     data['personality'] = label_encoder.fit_transform(data['personality'])
-
+    data['recommended_professions'] = label_encoder.fit_transform(
+        data['recommended_professions'])
 
     """Normalize RIASEC scores"""
     data[ria_scores] = data[ria_scores] / data[ria_scores].max()
