@@ -5,7 +5,9 @@ from LuminateMLScript import run_ml_script  # Import the function from your lumi
 app = Flask(__name__)
 
 
-
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 @app.route('/ai-api/predict', methods=['POST'])
