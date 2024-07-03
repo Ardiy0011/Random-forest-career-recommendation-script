@@ -1,0 +1,6 @@
+__pycache__/
+vercel.json
+.env
+career_file
+templates/
+gpt-training/
